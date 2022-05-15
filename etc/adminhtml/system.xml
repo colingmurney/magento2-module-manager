@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="colinmurney" translate="label" sortOrder="220">
+            <label>Colin Murney</label>
+        </tab>
+        <section id="module_manager" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+            <label>Module Manager</label>
+            <tab>colinmurney</tab>
+            <resource>ColinMurney_ModuleManager::disable_modules</resource>
+            <group id="general" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="disable_modules" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" type="multiselect">
+                    <label>Disable Modules</label>
+                    <comment>Select all modules to be disabled during setup:upgrade while in developer mode only</comment>
+                    <source_model>ColinMurney\ModuleManager\Model\Config\Source\ModuleList\Multiselect</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

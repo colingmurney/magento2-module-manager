@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Method 1 -->
+    <type name="Magento\Setup\Model\Installer">
+        <plugin name="colin_murney_disable_modules" type="ColinMurney\ModuleManager\Plugin\Model\Installer"/>
+    </type>
+
+    <!-- Method 2 -->
+    <type name="Magento\Framework\App\DeploymentConfig\Reader">
+        <plugin name="colin_murney_disable_modules2" type="ColinMurney\ModuleManager\Plugin\App\DeploymentConfig\Reader"/>
+    </type>
+
+    <!-- Method 3 -->
+    <type name="Magento\Framework\App\DeploymentConfig\Writer">
+        <plugin name="colin_murney_disable_modules3" type="ColinMurney\ModuleManager\Plugin\App\DeploymentConfig\Writer"/>
+    </type>
+</config>
